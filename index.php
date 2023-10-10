@@ -1,6 +1,5 @@
 <?php
-	$site_url = 'https://rewardingdoge.com';
-	$site_url = 'http://localhost/web3js/token1/web/';
+	$site_url = '';
 	
 	if(session_status() === PHP_SESSION_NONE){
 		session_start();
