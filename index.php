@@ -1,21 +1,4 @@
-<?php
-	$site_url = '';
-	
-	if(session_status() === PHP_SESSION_NONE){
-		session_start();
-		$_SESSION['r'] = '0x0000000000000000000000000000000000000000';
-	}
-	$r = '0x0000000000000000000000000000000000000000';
-	if( isset($_GET['r']) ){
-		$r = trim(preg_replace('/[^A-Za-z0-9]/', '', $_GET['r']));
-		if(strlen($r) != 42){
-			$r = '0x0000000000000000000000000000000000000000';
-		}
-		$_SESSION['r'] = $r;
-	}
-	if(isset($_SESSION['r'])){ $r = $_SESSION['r']; }
-	
-?><!DOCTYPE html>
+<!DOCTYPE html>
 <html class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers" lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -23,30 +6,30 @@
 		<title>CashBackPEPE (CBPEPE) - Home</title>
 		<meta name="description" content="">
 		
-		<link rel="stylesheet" href="<?php echo $site_url; ?>/css/animate.css">
-		<link rel="stylesheet" href="<?php echo $site_url; ?>/css/slick.css">
-		<link rel="stylesheet" href="<?php echo $site_url; ?>/css/LineIcons.css">
-		<link rel="stylesheet" href="<?php echo $site_url; ?>/css/bootstrap.min.css">
-		<link rel="stylesheet" href="<?php echo $site_url; ?>/css/default.css">
-		<link rel="stylesheet" href="<?php echo $site_url; ?>/css/style.css">
-		<link rel="stylesheet" href="<?php echo $site_url; ?>/css/extra.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/slick.css">
+		<link rel="stylesheet" href="css/LineIcons.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/default.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/extra.css">
 		
-		<link rel="apple-touch-icon" sizes="57x57" href="<?php echo $site_url; ?>/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="<?php echo $site_url; ?>/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo $site_url; ?>/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="<?php echo $site_url; ?>/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="<?php echo $site_url; ?>/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="<?php echo $site_url; ?>/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="<?php echo $site_url; ?>/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="<?php echo $site_url; ?>/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo $site_url; ?>/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192"  href="<?php echo $site_url; ?>/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo $site_url; ?>/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="<?php echo $site_url; ?>/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo $site_url; ?>/favicon/favicon-16x16.png">
-		<link rel="manifest" href="<?php echo $site_url; ?>/favicon/manifest.json">
+		<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/manifest.json">
 		<meta name="msapplication-TileColor" content="#35524bs">
-		<meta name="msapplication-TileImage" content="<?php echo $site_url; ?>/favicon/ms-icon-144x144.png">
+		<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
 		<meta name="theme-color" content="#35524b">
 
 	</head>
@@ -70,7 +53,7 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<nav class="navbar navbar-expand-lg">
-								<a class="navbar-brand" href="index"><img src="<?php echo $site_url; ?>/images/logo_title.png" alt="Logo"></a>
+								<a class="navbar-brand" href="index"><img src="images/logo_title.png" alt="Logo"></a>
 								<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 									<span class="toggler-icon"></span><span class="toggler-icon"></span><span class="toggler-icon"></span>
 								</button>
@@ -85,18 +68,18 @@
 				</div> 
 			</div> 
 			<div id="home" class="header_hero d-lg-flex align-items-center">
-				<div class="hero_shape shape_1"><img src="<?php echo $site_url; ?>/shapes/shape-1.svg" alt="shape"></div>
-				<div class="hero_shape shape_2"><img src="<?php echo $site_url; ?>/shapes/shape-2.svg" alt="shape"></div>
-				<div class="hero_shape shape_3"><img src="<?php echo $site_url; ?>/shapes/shape-3.svg" alt="shape"></div>
-				<div class="hero_shape shape_4"><img src="<?php echo $site_url; ?>/shapes/shape-4.svg" alt="shape"></div>
-				<div class="hero_shape shape_5"><img src="<?php echo $site_url; ?>/shapes/shape-3.svg" alt="shape"></div>
-				<div class="hero_shape shape_6"><img src="<?php echo $site_url; ?>/shapes/shape-1.svg" alt="shape"></div>
-				<div class="hero_shape shape_7"><img src="<?php echo $site_url; ?>/shapes/shape-4.svg" alt="shape"></div>
-				<div class="hero_shape shape_8"><img src="<?php echo $site_url; ?>/shapes/shape-3.svg" alt="shape"></div>
-				<div class="hero_shape shape_9"><img src="<?php echo $site_url; ?>/shapes/shape-2.svg" alt="shape"></div>
-				<div class="hero_shape shape_10"><img src="<?php echo $site_url; ?>/shapes/shape-4.svg" alt="shape"></div>
-				<div class="hero_shape shape_11"><img src="<?php echo $site_url; ?>/shapes/shape-1.svg" alt="shape"></div>
-				<div class="hero_shape shape_12"><img src="<?php echo $site_url; ?>/shapes/shape-2.svg" alt="shape"></div>
+				<div class="hero_shape shape_1"><img src="shapes/shape-1.svg" alt="shape"></div>
+				<div class="hero_shape shape_2"><img src="shapes/shape-2.svg" alt="shape"></div>
+				<div class="hero_shape shape_3"><img src="shapes/shape-3.svg" alt="shape"></div>
+				<div class="hero_shape shape_4"><img src="shapes/shape-4.svg" alt="shape"></div>
+				<div class="hero_shape shape_5"><img src="shapes/shape-3.svg" alt="shape"></div>
+				<div class="hero_shape shape_6"><img src="shapes/shape-1.svg" alt="shape"></div>
+				<div class="hero_shape shape_7"><img src="shapes/shape-4.svg" alt="shape"></div>
+				<div class="hero_shape shape_8"><img src="shapes/shape-3.svg" alt="shape"></div>
+				<div class="hero_shape shape_9"><img src="shapes/shape-2.svg" alt="shape"></div>
+				<div class="hero_shape shape_10"><img src="shapes/shape-4.svg" alt="shape"></div>
+				<div class="hero_shape shape_11"><img src="shapes/shape-1.svg" alt="shape"></div>
+				<div class="hero_shape shape_12"><img src="shapes/shape-2.svg" alt="shape"></div>
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-6">
@@ -118,7 +101,7 @@
 				<div class="header_shape d-none d-lg-block"></div>
 				<div class="header_image d-flex align-items-center">
 					<a class="image" href="index.html">
-						<img src="<?php echo $site_url; ?>/images/logo.png" alt="Header Image" style="visibility: visible;">
+						<img src="images/logo.png" alt="Header Image" style="visibility: visible;">
 					</a>
 				</div> 
 			</div> 
@@ -248,28 +231,28 @@
 					<div class="col-lg-3">
 						<div class="single_work">
 							<div class="work_content">
-								<h4 class="work_title"><img src="<?php echo $site_url; ?>/images/ct-coinmooner.png"/><a href="#">CoinMooner</a></h4>
+								<h4 class="work_title"><img src="images/ct-coinmooner.png"/><a href="#">CoinMooner</a></h4>
 							</div>
 						</div> 
 					</div>
 					<div class="col-lg-3">
 						<div class="single_work">
 							<div class="work_content">
-								<h4 class="work_title"><img src="<?php echo $site_url; ?>/images/ct-coinvote.png"/><a href="#">CoinVote</a></h4>
+								<h4 class="work_title"><img src="images/ct-coinvote.png"/><a href="#">CoinVote</a></h4>
 							</div>
 						</div> 
 					</div>
 					<div class="col-lg-3">
 						<div class="single_work">
 							<div class="work_content">
-								<h4 class="work_title"><img src="<?php echo $site_url; ?>/images/ct-freshcoins.png"/><a href="#">FreshCoins</a></h4>
+								<h4 class="work_title"><img src="images/ct-freshcoins.png"/><a href="#">FreshCoins</a></h4>
 							</div>
 						</div> 
 					</div>
 					<div class="col-lg-3">
 						<div class="single_work">
 							<div class="work_content">
-								<h4 class="work_title"><img src="<?php echo $site_url; ?>/images/ct-gemfinder.png"/><a href="#">GemFinder</a></h4>
+								<h4 class="work_title"><img src="images/ct-gemfinder.png"/><a href="#">GemFinder</a></h4>
 							</div>
 						</div> 
 					</div>
@@ -304,11 +287,11 @@
 				<div class="footer_copyright d-sm-flex justify-content-between">
 					<div class="footer_social text-center">
 						<ul class="social">
-							<li><a href="#"><img src="<?php echo $site_url; ?>/images/s-tg.png"/></a></li>
-							<li><a href="#"><img src="<?php echo $site_url; ?>/images/s-dc.png"/></a></li>
-							<li><a href="#"><img src="<?php echo $site_url; ?>/images/s-fb.png"/></a></li>
-							<li><a href="#"><img src="<?php echo $site_url; ?>/images/s-tw.png"/></a></li>
-							<li><a href="#"><img src="<?php echo $site_url; ?>/images/s-rd.png"/></a></li>
+							<li><a href="#"><img src="images/s-tg.png"/></a></li>
+							<li><a href="#"><img src="images/s-dc.png"/></a></li>
+							<li><a href="#"><img src="images/s-fb.png"/></a></li>
+							<li><a href="#"><img src="images/s-tw.png"/></a></li>
+							<li><a href="#"><img src="images/s-rd.png"/></a></li>
 						</ul>
 					</div> 
 					<div class="footer_copyright_content  text-center">
@@ -320,17 +303,17 @@
 
 		<a href="#" class="back-to-top" style="display: none;">&#8679;</a>
 
-		<script src="<?php echo $site_url; ?>/js/jquery-1.12.4.min.js"></script>
-		<script src="<?php echo $site_url; ?>/js/modernizr-3.7.1.min.js"></script>
-		<script src="<?php echo $site_url; ?>/js/popper.min.js"></script>
-		<script src="<?php echo $site_url; ?>/js/bootstrap.min.js"></script>
-		<script src="<?php echo $site_url; ?>/js/slick.min.js"></script>
-		<script src="<?php echo $site_url; ?>/js/jquery.easing.min.js"></script>
-		<script src="<?php echo $site_url; ?>/js/scrolling-nav.js"></script>
-		<script src="<?php echo $site_url; ?>/js/wow.min.js"></script>
-		<script src="<?php echo $site_url; ?>/js/main.js"></script>
+		<script src="js/jquery-1.12.4.min.js"></script>
+		<script src="js/modernizr-3.7.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/slick.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/scrolling-nav.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/main.js"></script>
 
-		<script src="<?php echo $site_url; ?>/js/extra.js"></script>
+		<script src="js/extra.js"></script>
 		
 		
 		<p id="floatalertbox" style="position:fixed; right:20px; bottom:20px; border-radius:5px; background-color:#000; z-index:99;	padding:10px 15px; color:#fff; font-size:14px; display:none; transition:0.3s all ease-in-out; display:none; border:2px solid #fff; box-shadow:0 0 5px #a80000;"></p>
